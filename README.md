@@ -1,8 +1,6 @@
-dwm - dynamic window manage
-============================
+# dwm - dynamic window manage
 My custom minimal DWM
 
-Patches
-------------
-+ [alwasycenter](https://dwm.suckless.org/patches/alwayscenter/) *(20200625-f04cac6)*
-+ [uselessgap](https://dwm.suckless.org/patches/uselessgap/) *(20211119-58414bee958f2)*
+## Patches
+* [alwasycenter](https://dwm.suckless.org/patches/alwayscenter/) *(dwm-alwayscenter-20200625-f04cac6)*
+* [uselessgap](https://dwm.suckless.org/patches/uselessgap/) *(dwm-uselessgap-20211119-58414bee958f2)*
