@@ -1,5 +1,4 @@
 # dwm - dynamic window manage
-My custom minimal DWM
 
 ## Patches
 * [alwasycenter](https://dwm.suckless.org/patches/alwayscenter/) *(dwm-alwayscenter-20200625-f04cac6)*
