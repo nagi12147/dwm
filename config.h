@@ -6,8 +6,8 @@ static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:style=bold:pixelsize=14:antialias=true:autohint=true" };
-static const char dmenufont[]       = "monospace:style=bold:pixelsize=14:antialias=true:autohint=true";
+static const char *fonts[]          = { "monospace:style=bold:pixelsize=15:antialias=true", "Noto Sans Mono CJK JP:style=bold:pixelsize=14:antialias=true" };
+static const char dmenufont[]       = "monospace:style=bold:pixelsize=15:antialias=true";
 static const char hitam[]           = "#1d1f21";
 static const char abu[]		        = "#373b41";
 static const char putih[]           = "#c5c8c6";
@@ -95,9 +95,15 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 	{ MODKEY,                       XK_F1,      spawn,          SHCMD("flameshot gui") },
 	{ MODKEY,                       XK_F2,      spawn,          SHCMD("maimocr") },
-	{ MODKEY,                       XK_F10,     spawn,          SHCMD("pamixer -t")  },
-	{ MODKEY,                       XK_F11,     spawn,          SHCMD("pamixer --allow-boost -d 5") },
-	{ MODKEY,                       XK_F12,     spawn,          SHCMD("pamixer --allow-boost -i 5") },
+
+	#include <X11/XF86keysym.h>
+	{ 0, XF86XK_AudioMute,          spawn,      SHCMD("pamixer -t")  },
+	{ 0, XF86XK_AudioLowerVolume,   spawn,      SHCMD("pamixer --allow-boost -d 5") },
+	{ 0, XF86XK_AudioRaiseVolume,   spawn,      SHCMD("pamixer --allow-boost -i 5") },
+	{ 0, XF86XK_AudioRaiseVolume,   spawn,      SHCMD("pamixer --allow-boost -i 5") },
+	{ 0, XF86XK_AudioRaiseVolume,   spawn,      SHCMD("pamixer --allow-boost -i 5") },
+	{ 0, XF86XK_MonBrightnessUp,	spawn,		SHCMD("xbacklight -inc 10") },
+	{ 0, XF86XK_MonBrightnessDown,	spawn,		SHCMD("xbacklight -dec 10") },
 };
 
 /* button definitions */
