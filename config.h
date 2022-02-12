@@ -126,6 +126,8 @@ static Key keys[] = {
     { MODKEY|ShiftMask,             XK_F1,     spawn,          SHCMD("maimsel") },
     { MODKEY|ShiftMask,             XK_F2,     spawn,          SHCMD("maimwin") },
     { MODKEY|ShiftMask,             XK_F3,     spawn,          SHCMD("maimfull") },
+    { MODKEY,                       XK_F12,    spawn,          SHCMD("dmount") },
+    { MODKEY|ShiftMask,             XK_F12,    spawn,          SHCMD("dunmount") },
     { MODKEY,                       XK_e,      spawn,          SHCMD("emoji") },
     { MODKEY,                       XK_n,      spawn,          SHCMD("notflix") },
     { MODKEY|ShiftMask,             XK_n,      spawn,          SHCMD(TERMINAL " -e sudo nmtui") },
