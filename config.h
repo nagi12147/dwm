@@ -17,10 +17,19 @@ static const char col_gray2[]       = "#353535"; /*444444*/
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
 static const char col_cyan[]        = "#005577";
+/* Gruvbox */
+static const char col_bg[]          = "#282828";
+static const char col_fg[]          = "#a89984";
+static const char col_lfg[]         = "#ebdbb2";
+static const char col_border[]      = "#d65d0e";
+static const char col_sborder[]     = "#504945";
+
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+	[SchemeNorm] = { col_fg, col_bg, col_sborder },
+	[SchemeSel]  = { col_lfg, col_bg,  col_border },
+	//[SchemeNorm] = { col_gray3, col_gray1, col_gay2 },
+	//[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
 };
 
 /* tagging */
@@ -106,9 +115,9 @@ static Key keys[] = {
  	{ MODKEY|ShiftMask,             XK_equal,                   spawn,          SHCMD("pactl set-sink-volume @DEFAULT_SINK@ +15%; pkill -RTMIN+1 dwmblocks") },
  	{ MODKEY,                       XK_minus,                   spawn,          SHCMD("pactl set-sink-volume @DEFAULT_SINK@ -5%; pkill -RTMIN+1 dwmblocks") },
  	{ MODKEY|ShiftMask,             XK_minus,                   spawn,          SHCMD("pactl set-sink-volume @DEFAULT_SINK@ -15%; pkill -RTMIN+1 dwmblocks") },
- 	{ MODKEY,                       XK_bracketright,            spawn,          SHCMD("xbacklight -inc 5") },
- 	{ MODKEY|ShiftMask,             XK_bracketright,            spawn,          SHCMD("xbacklight -inc 5") },
- 	{ MODKEY,                       XK_bracketleft,             spawn,          SHCMD("xbacklight -dec 5") },
+ 	{ MODKEY,                       XK_bracketright,            spawn,          SHCMD("xbacklight -inc 2") },
+ 	{ MODKEY|ShiftMask,             XK_bracketright,            spawn,          SHCMD("xbacklight -inc 10") },
+ 	{ MODKEY,                       XK_bracketleft,             spawn,          SHCMD("xbacklight -dec 2") },
  	{ MODKEY|ShiftMask,             XK_bracketleft,             spawn,          SHCMD("xbacklight -dec 10") },
    	{ MODKEY,                       XK_F1,                      spawn,          SHCMD("maimclip -s") },
    	{ MODKEY,                       XK_F2,                      spawn,          SHCMD("maimclip -w") },
@@ -123,7 +132,7 @@ static Key keys[] = {
    	{ MODKEY,                       XK_e,                       spawn,          SHCMD("emoji") },
    	{ MODKEY,                       XK_r,                       spawn,          SHCMD(TERMINAL " -e lf") },
    	{ MODKEY,                       XK_v,                       spawn,          SHCMD(TERMINAL " -e nvim $HOME/docs/Note.md") },
-   	{ MODKEY|ShiftMask,             XK_w,                       spawn,          SHCMD("word-lookup") },
+   	{ MODKEY,                       XK_w,                       spawn,          SHCMD("word-lookup") },
    	{ MODKEY,                       XK_n,                       spawn,          SHCMD(TERMINAL " -e nmcli device wifi rescan; nmtui") },
    	{ MODKEY,                       XK_p,                       spawn,          SHCMD("yt-play") },
 };
