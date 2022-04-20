@@ -86,6 +86,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                                       7)
 	TAGKEYS(                        XK_9,                                       8)
 	{ MODKEY,                       XK_d,                       spawn,          {.v = dmenucmd } },
+	{ MODKEY|ShiftMask,             XK_d,                       spawn,          SHCMD("j4-dmenu-desktop") },
 	{ MODKEY,                       XK_Return,                  spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,                       togglebar,      {0} },
 	{ MODKEY,                       XK_j,                       focusstack,     {.i = +1 } },
