@@ -10,7 +10,7 @@ dwm is a dynamic window manager for X. It manages windows in tiled, monocle and 
 - uselessgap ([20211119-58414bee958f2](https://dwm.suckless.org/patches/uselessgap/dwm-uselessgap-20211119-58414bee958f2.diff))
 
 ## Latest Update
-`Update monitor positions also on removal`
+`manage: Make sure c->isfixed is applied before floating checks`
 
 ## Credits
 [Original dwm](https://dwm.suckless.org) (suckless)
